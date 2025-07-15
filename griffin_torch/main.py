@@ -214,7 +214,7 @@ class GriffinResidualBlock(nn.Module):
         print(linear_1.shape)
 
         # RG-LRU
-        # linear_1 = self.lru(linear_1)
+        linear_1 = self.lru(linear_1)
 
         # Gelu on linear 2
         linear_2 = nn.GELU()(linear_2)
